@@ -22,7 +22,9 @@ public class IndexController {
     @PostMapping("/upload")
     public String upload(@RequestParam("archivos") MultipartFile file, RedirectAttributes message) {
         uploadService.saveFile(file);
-        message.addAttribute("message", "Archivo subido correctamente.");
+        message.addFlashAttribute("message", "Archivo subido correctamente.");
         return "redirect:/";
     }
+
+
 }
