@@ -14,6 +14,30 @@ import javax.swing.text.html.parser.Entity;
 @SpringBootTest
 class EmployeeeRepositoryTest {
 	@Autowired private EmployeeRepository employeeRepository;
+
+	@Test
+	void insertAllEmployees() {
+		EmployeeEntity employee1 = new EmployeeEntity();
+		employee1.setRut("21.024.191-4");
+		employee1.setName("Christopher Alejandro Torres Aceituno");
+		employee1.setCategory('A');
+		employeeRepository.save(employee1);
+		EmployeeEntity employee2 = new EmployeeEntity();
+		employee2.setRut("21.014.566-4");
+		employee2.setName("Vanina Antonia Correa Chávez");
+		employee2.setCategory('A');
+		employeeRepository.save(employee2);
+		EmployeeEntity employee3 = new EmployeeEntity();
+		employee3.setRut("22.223.596-3");
+		employee3.setName("Josed Aguilar Lopez Gutiérrez");
+		employee3.setCategory('B');
+		employeeRepository.save(employee3);
+		EmployeeEntity employee4 = new EmployeeEntity();
+		employee4.setRut("20.123.456-7");
+		employee4.setName("Pablo Enrique Román Aserjo");
+		employee4.setCategory('C');
+		employeeRepository.save(employee4);
+	}
 	@Test
 	void testAddNew() {
 		EmployeeEntity employee1 = new EmployeeEntity();
@@ -48,10 +72,10 @@ class EmployeeeRepositoryTest {
 
 	@Test
 	void testFindEmployeeByRut() {
-		String rut = "21.014.566-4";
+		String rut = "20.123.456-7";
 		EmployeeEntity employee = employeeRepository.findByRut(rut);
 		if (employee != null)
-			System.out.println("Empleado encontrado: " + employee.toString());
+			System.out.println("Empleado encontrado: " + employee.getName());
 		else
 			System.out.println("No existe el empleado con rut: " + rut);
 		Assertions.assertThat(employee).isNotNull();
@@ -69,7 +93,7 @@ class ClockRepositoryTest {
 			ClockEntity clock1 = new ClockEntity();
 			clock1.setCheck_in_time("08:00:00");
 			clock1.setDate("2021-05-01");
-			clock1.setEmployee(employeeRepository.findById(id).get());
+			clock1.setEmployee(employeeRepository.findByRut("20.123.456-7"));
 			ClockEntity savedClock = clockRepository.save(clock1);
 			Assertions.assertThat(savedClock).isNotNull();
 			Assertions.assertThat(savedClock.getId()).isGreaterThan(0);

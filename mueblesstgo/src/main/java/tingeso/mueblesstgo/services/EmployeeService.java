@@ -13,4 +13,7 @@ public class EmployeeService {
     public ArrayList<EmployeeEntity> getAllEmployees(){
         return (ArrayList<EmployeeEntity>) employeeRepository.findAll();
     }
+    public EmployeeEntity getEmployeeByName(String name){
+        return employeeRepository.findByName(name);
+    }
 }

@@ -9,15 +9,22 @@ import java.util.Scanner;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
+import tingeso.mueblesstgo.repositories.EmployeeRepository;
+import tingeso.mueblesstgo.entities.EmployeeEntity;
+import tingeso.mueblesstgo.repositories.ClockRepository;
+import tingeso.mueblesstgo.entities.ClockEntity;
+import tingeso.mueblesstgo.services.ClockService;
+
+import javax.swing.text.html.parser.Entity;
 
 
 @Service
 public class UploadService {
     private String folder = "mueblesstgo//uploads//";
     private final Logger logger = LoggerFactory.getLogger(UploadService.class);
-
     public String saveFile(MultipartFile file) {
         if (!file.isEmpty()){
             try {
@@ -32,15 +39,39 @@ public class UploadService {
         return "Archivo guardado correctamente.";
     }
 
+    @Autowired private ClockRepository clockRepository;
+    @Autowired private EmployeeRepository employeeRepository;
+    @Autowired private ClockService clockService;
     private String path = "mueblesstgo//uploads//Data.txt";
     public String readFile(String filename) {
         File file = new File(path);
-
+        String dateTemp = "";
+        String checkInTemp = "";
+        String rutTemp = "";
         try {
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
+                ClockEntity clockTemp = new ClockEntity();
                 String line = scanner.nextLine();
-                System.out.println(line);
+                dateTemp = line.substring(0,10);
+                checkInTemp = line.substring(11,16);
+                rutTemp = line.substring(17,29);
+                if (clockRepository.findByDateAndEmployee(dateTemp, employeeRepository.findByRut(rutTemp)) == null) {
+                    clockTemp.setDate(dateTemp);
+                    clockTemp.setCheck_in_time(checkInTemp);
+                    clockTemp.setEmployee(employeeRepository.findByRut(rutTemp));
+                    if (clockService.calculateDiscount(checkInTemp) == 0)
+                        clockTemp.setDiscount(0);
+                    else if (clockService.calculateDiscount(checkInTemp) == 1)
+                        clockTemp.setDiscount(1);
+                    else if (clockService.calculateDiscount(checkInTemp) == 3)
+                        clockTemp.setDiscount(3);
+                    else if (clockService.calculateDiscount(checkInTemp) == 6)
+                        clockTemp.setDiscount(6);
+                    else
+                        clockTemp.setDiscount(15);
+                    clockRepository.save(clockTemp);
+                }
             }
             scanner.close();
         } catch (IOException e) {
@@ -48,8 +79,4 @@ public class UploadService {
         }
         return "Archivo leido correctamente.";
     }
-
-
-
-
 }

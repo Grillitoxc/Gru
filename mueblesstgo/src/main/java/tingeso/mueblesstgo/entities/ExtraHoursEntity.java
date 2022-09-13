@@ -1,15 +1,15 @@
 package tingeso.mueblesstgo.entities;
 
 import lombok.*;
+
 import javax.persistence.*;
-import tingeso.mueblesstgo.entities.EmployeeEntity;
 
 @Entity
-@Table(name = "clock")
+@Table(name = "extra_hours")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class ClockEntity {
+public class ExtraHoursEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
@@ -20,21 +20,10 @@ public class ClockEntity {
     @Getter
     @Setter
     @Column(nullable = false)
-    private String date;
+    private String name;
 
     @Getter
     @Setter
     @Column(nullable = false)
-    private String check_in_time;
-
-    @Getter
-    @Setter
-    @Column(nullable = false)
-    private int discount;
-
-    @Getter
-    @Setter
-    @ManyToOne
-    @JoinColumn(name = "id_employee")
-    private EmployeeEntity employee;
+    private int hours;
 }
