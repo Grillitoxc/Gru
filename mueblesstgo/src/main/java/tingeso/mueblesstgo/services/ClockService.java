@@ -35,10 +35,12 @@ public class ClockService {
         if (employeeRepository.findByName(employeeName) != null && verifyExtraHours(extraHours) &&
                 extraHoursRepository.findByName(employeeName) == null) {
             int extraHoursInt = Integer.parseInt(extraHours);
-            ExtraHoursEntity extraHoursEntity = new ExtraHoursEntity();
-            extraHoursEntity.setName(employeeName);
-            extraHoursEntity.setHours(extraHoursInt);
-            extraHoursRepository.save(extraHoursEntity);
+            if (extraHoursInt > 0 && extraHoursInt <= 30) {
+                ExtraHoursEntity extraHoursEntity = new ExtraHoursEntity();
+                extraHoursEntity.setName(employeeName);
+                extraHoursEntity.setHours(extraHoursInt);
+                extraHoursRepository.save(extraHoursEntity);
+            }
         }
     }
 

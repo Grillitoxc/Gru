@@ -13,16 +13,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 import tingeso.mueblesstgo.repositories.EmployeeRepository;
-import tingeso.mueblesstgo.entities.EmployeeEntity;
 import tingeso.mueblesstgo.repositories.ClockRepository;
 import tingeso.mueblesstgo.entities.ClockEntity;
-import tingeso.mueblesstgo.services.ClockService;
-
-import javax.swing.text.html.parser.Entity;
 
 
 @Service
 public class UploadService {
+    @Autowired private ClockRepository clockRepository;
+    @Autowired private EmployeeRepository employeeRepository;
+    @Autowired private ClockService clockService;
+
     private String folder = "mueblesstgo//uploads//";
     private final Logger logger = LoggerFactory.getLogger(UploadService.class);
     public String saveFile(MultipartFile file) {
@@ -39,9 +39,6 @@ public class UploadService {
         return "Archivo guardado correctamente.";
     }
 
-    @Autowired private ClockRepository clockRepository;
-    @Autowired private EmployeeRepository employeeRepository;
-    @Autowired private ClockService clockService;
     private String path = "mueblesstgo//uploads//Data.txt";
     public String readFile(String filename) {
         File file = new File(path);

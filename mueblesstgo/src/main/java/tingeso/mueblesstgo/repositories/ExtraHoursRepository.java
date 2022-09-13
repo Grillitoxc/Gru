@@ -7,4 +7,5 @@ import tingeso.mueblesstgo.entities.ExtraHoursEntity;
 @Repository
 public interface ExtraHoursRepository extends JpaRepository<ExtraHoursEntity, Long> {
     ExtraHoursEntity findByName(String name);
+
 }

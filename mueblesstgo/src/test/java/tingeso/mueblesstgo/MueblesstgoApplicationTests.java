@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.swing.text.html.parser.Entity;
+import java.util.ArrayList;
 
 @SpringBootTest
 class EmployeeeRepositoryTest {
@@ -37,18 +38,6 @@ class EmployeeeRepositoryTest {
 		employee4.setName("Pablo Enrique Román Aserjo");
 		employee4.setCategory('C');
 		employeeRepository.save(employee4);
-	}
-	@Test
-	void testAddNew() {
-		EmployeeEntity employee1 = new EmployeeEntity();
-		employee1.setRut("21.024.191-4");
-		employee1.setName("Grillitoxc");
-		employee1.setCategory('A');
-		EmployeeEntity savedEmployee = employeeRepository.save(employee1);
-
-		Assertions.assertThat(savedEmployee).isNotNull();
-		Assertions.assertThat(savedEmployee.getId()).isGreaterThan(0);
-		System.out.println("Empleado: " + employee1.toString() + " ingresado con exito");
 	}
 
 	@Test
@@ -80,6 +69,16 @@ class EmployeeeRepositoryTest {
 			System.out.println("No existe el empleado con rut: " + rut);
 		Assertions.assertThat(employee).isNotNull();
 	}
+
+	@Test
+	void testFindEmployees() {
+		Iterable<EmployeeEntity> employees = employeeRepository.findAll();
+		for (EmployeeEntity employee : employees) {
+			System.out.println("Empleado encontrado: " + employee.getName());
+		}
+		Assertions.assertThat(employees).isNotNull();
+	}
+
 }
 
 @SpringBootTest
@@ -119,6 +118,24 @@ class ClockRepositoryTest {
 		} else
 			System.out.println("No existe el reloj con id: " + id);
 		Assertions.assertThat(clockRepository.findById(id)).isPresent();
+	}
+
+	@Test
+	void testFindDiscountByEmployee() {
+		EmployeeEntity employee = employeeRepository.findByName("Christopher Alejandro Torres Aceituno");
+		ArrayList<Integer> discounts = clockRepository.findDiscountByEmployee(employee);
+		for (Integer discount : discounts) {
+			System.out.println("Descuento: " + discount);
+		}
+	}
+
+	@Test
+	void testFindAllByEmployeeContaining() {
+		EmployeeEntity employee = employeeRepository.findByName("Christopher Alejandro Torres Aceituno");
+		ArrayList<ClockEntity> clocks = clockRepository.findAllByEmployeeContaining(employee);
+		for (ClockEntity clock : clocks) {
+			System.out.println("Reloj: " + clock.getId());
+		}
 	}
 }
 

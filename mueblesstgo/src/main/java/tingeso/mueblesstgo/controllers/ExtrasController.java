@@ -14,27 +14,27 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.ArrayList;
 
 @Controller
-public class SpreadsheetController {
+public class ExtrasController {
     @Autowired private ClockService clockService;
     @Autowired private UploadService uploadService;
     @Autowired private EmployeeService employeeService;
 
-    @GetMapping("/list_spreadsheets")
+    @GetMapping("/extra_data")
     public String spreadsheets(Model model) {
         uploadService.readFile("Data.txt");
         ArrayList<EmployeeEntity> employees = employeeService.getAllEmployees();
         model.addAttribute("employees", employees);
-        return "spreadsheet";
+        return "extras";
     }
-    @PostMapping("/list_spreadsheets")
+    @PostMapping("/extra_data")
     public String getJustifiers(@RequestParam("dateImput") String dateImput, @RequestParam("employeeName") String employeeName, Model model) {
         clockService.setJustifier(dateImput, employeeName);
-        return "redirect:/list_spreadsheets";
+        return "redirect:/extra_data";
     }
 
-    @PostMapping("/list_spreadsheets/hours")
+    @PostMapping("/extra_data/hours")
     public String getHours(@RequestParam("extraHours") String extraHours, @RequestParam("employeeName") String employeeName, Model model) {
         clockService.setExtraHours(employeeName, extraHours);
-        return "redirect:/list_spreadsheets";
+        return "redirect:/extra_data";
     }
 }
