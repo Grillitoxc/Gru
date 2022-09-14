@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e8afdd26-88e2-4c65-9991-381554163535" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/SpreadsheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/ExtrasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ClockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ClockRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ExtraHoursRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ExtraHoursRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/spreadsheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/extras.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/EmployeeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/EmployeeEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -52,24 +46,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/crisp/OneDrive/Escritorio/Tingeso_Evaluacion1_MueblesStgo",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "spring.configuration.checksum": "21bd0c8bdc17a016e904c346fa999c9c"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/crisp/OneDrive/Escritorio/Tingeso_Evaluacion1_MueblesStgo&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;21bd0c8bdc17a016e904c346fa999c9c&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\.idea" />
@@ -140,7 +134,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmployeeeRepositoryTest.testFindEmployees" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeeRepositoryTest.insertAllEmployees" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mueblesstgo" />
       <extension name="coverage">
         <pattern>
@@ -150,7 +144,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
       <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.EmployeeeRepositoryTest" />
-      <option name="METHOD_NAME" value="testFindEmployees" />
+      <option name="METHOD_NAME" value="insertAllEmployees" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -165,11 +159,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmployeeeRepositoryTest.insertAllEmployees" />
         <item itemvalue="JUnit.ClockRepositoryTest.testFindAllByEmployeeContaining" />
         <item itemvalue="JUnit.ClockRepositoryTest.testFindDiscountByEmployee" />
         <item itemvalue="JUnit.ClockRepositoryTest.testDindDiscountByEmployee" />
         <item itemvalue="JUnit.ClockRepositoryTest.testFindAllDiscountByEmployee" />
-        <item itemvalue="JUnit.EmployeeeRepositoryTest.testFindEmployees" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +178,8 @@
       <workItem from="1662668567934" duration="7887000" />
       <workItem from="1662681540703" duration="4249000" />
       <workItem from="1662830333004" duration="14192000" />
-      <workItem from="1663001931119" duration="40129000" />
+      <workItem from="1663001931119" duration="40267000" />
+      <workItem from="1663120747561" duration="7072000" />
     </task>
     <servers />
   </component>
@@ -211,8 +206,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java</url>
-          <line>123</line>
-          <properties class="tingeso.mueblesstgo.ClockRepositoryTest" method="testDindDiscountByEmployee">
+          <line>133</line>
+          <properties class="tingeso.mueblesstgo.ClockRepositoryTest" method="testFindDiscountByEmployee">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
