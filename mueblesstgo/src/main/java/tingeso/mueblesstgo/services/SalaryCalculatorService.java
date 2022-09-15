@@ -18,10 +18,14 @@ public class SalaryCalculatorService {
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
 
-    @Autowired private ClockRepository clockRepository;
-    @Autowired private ExtraHoursRepository extraHoursRepository;
-    @Autowired private EmployeeRepository employeeRepository;
-    @Autowired private JustifierRepository justifierRepository;
+    @Autowired
+    private ClockRepository clockRepository;
+    @Autowired
+    private ExtraHoursRepository extraHoursRepository;
+    @Autowired
+    private EmployeeRepository employeeRepository;
+    @Autowired
+    private JustifierRepository justifierRepository;
 
     public void calculateSalary() {
         ArrayList<EmployeeEntity> employees = employeeRepository.findAll();
@@ -51,7 +55,6 @@ public class SalaryCalculatorService {
                 extraHoursMoney = extraHoursRepository.findByName(employee.getName()).getHours() * multiplier;
             }
             // extraHoursMoney tiene el valor de las horas extras pagadas
-
 
             /* Bonificaciones por años de servicio */
             int years = employee.getYearsOfService();
@@ -127,24 +130,28 @@ public class SalaryCalculatorService {
 
             employeeRepository.save(employee);
             // Hacer un print de los datos del empleado bonito
-            System.out.println();
-            System.out.println(ANSI_RED_BACKGROUND + "Planilla de sueldo de " + employee.getName() + ANSI_RESET);
-            System.out.println("Rut: " + employee.getRut());
-            System.out.println("Nombre empleado: " + employee.getName());
-            System.out.println("Categoría: " + employee.getCategory());
-            System.out.println("Años de servicio: " + employee.getYearsOfService());
-            System.out.println("Sueldo base: $" + Math.round(employee.getFixedSalary()));
-            System.out.println("Monto bonificación por años de servicio: $" + Math.round(employee.getYearsOfServiceBonus()));
-            System.out.println("Monto bonificación por horas extras: $" + Math.round(employee.getExtraHoursBonus()));
-            System.out.println("Monto descuentos: $" + Math.round(employee.getDiscounts()));
-            System.out.println("Sueldo bruto: $" + Math.round(employee.getGrossSalary()));
-            System.out.println("Monto cotización previsional: $" + Math.round(employee.getForecastQuote()));
-            System.out.println("Monto cotización salud: $" + Math.round(employee.getHealthQuote()));
-            System.out.println("Sueldo neto (final): $" + Math.round(employee.getFinalSalary()));
+            prints(employee);
         }
     }
 
-    public static Double formatearDecimales(Double numero, Integer numeroDecimales) {
+    private static void prints(EmployeeEntity employee) {
+        System.out.println();
+        System.out.println(ANSI_RED_BACKGROUND + "Planilla de sueldo de " + employee.getName() + ANSI_RESET);
+        System.out.println("Rut: " + employee.getRut());
+        System.out.println("Nombre empleado: " + employee.getName());
+        System.out.println("Categoría: " + employee.getCategory());
+        System.out.println("Años de servicio: " + employee.getYearsOfService());
+        System.out.println("Sueldo base: $" + Math.round(employee.getFixedSalary()));
+        System.out.println("Monto bonificación por años servicio: $" + Math.round(employee.getYearsOfServiceBonus()));
+        System.out.println("Monto bonificación por horas extras: $" + Math.round(employee.getExtraHoursBonus()));
+        System.out.println("Monto descuentos: $" + Math.round(employee.getDiscounts()));
+        System.out.println("Sueldo bruto: $" + Math.round(employee.getGrossSalary()));
+        System.out.println("Monto cotización previsional: $" + Math.round(employee.getForecastQuote()));
+        System.out.println("Monto cotización salud: $" + Math.round(employee.getHealthQuote()));
+        System.out.println("Sueldo neto (final): $" + Math.round(employee.getFinalSalary()));
+    }
+
+    private static Double formatearDecimales(Double numero, Integer numeroDecimales) {
         return Math.round(numero * Math.pow(10, numeroDecimales)) / Math.pow(10, numeroDecimales);
     }
 }

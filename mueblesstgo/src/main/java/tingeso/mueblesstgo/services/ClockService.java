@@ -58,17 +58,12 @@ public class ClockService {
 
 
     public boolean verifyDate(String dateImput){
-        // Verify Length of date
         if (dateImput.length() != 10)
             return false;
-
-        // Verify Slashes
         char firstSlash = dateImput.charAt(4);
         char secondSlash = dateImput.charAt(7);
         if (firstSlash != '/' || secondSlash != '/')
             return false;
-
-        // Verify valid numbers
         char[] year = dateImput.substring(0,4).toCharArray();
         char[] month = dateImput.substring(5,7).toCharArray();
         char[] day = dateImput.substring(8,10).toCharArray();
@@ -84,14 +79,11 @@ public class ClockService {
             if (!Character.isDigit(c))
                 return false;
         }
-        
-        // Verify valid date
         int yearInt = Integer.parseInt(dateImput.substring(0,4));
         int monthInt = Integer.parseInt(dateImput.substring(5,7));
         int dayInt = Integer.parseInt(dateImput.substring(8,10));
         if (monthInt < 1 || monthInt > 12 || dayInt < 1 || dayInt > 31 || yearInt != 2022)
             return false;
-
         return true;
     }
 

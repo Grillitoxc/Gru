@@ -1,57 +1,162 @@
 <!DOCTYPE HTML>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-  <title>MueblesStgo</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
-        crossorigin="anonymous">
+	<title>MueblesStgo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<link rel="shortcut icon" href="https://i.ibb.co/FgxH1M1/logo.png">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+	      rel="stylesheet"
+	      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+	      crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+	        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+	        crossorigin="anonymous">
+	</script>
 </head>
+
+<header>
+	<div class="collapse bg-dark" id="navbarHeader">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8 col-md-7 py-4">
+					<h4 class="text-white">Sobre MueblesStgo</h4>
+					<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+						ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+						in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+						cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..</p>
+				</div>
+				<div class="col-sm-4 offset-md-1 py-4">
+					<h4 class="text-white">Contacto</h4>
+					<ul class="list-unstyled">
+						<li><a href="#" class="text-white">Instagram</a></li>
+						<li><a href="#" class="text-white">Facebook</a></li>
+						<li><a href="#" class="text-white">Mail</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="navbar navbar-dark bg-dark shadow-sm">
+		<div class="container">
+			<a href="/" class="navbar-brand d-flex align-items-center">
+				<svg style="color: white" width="60" height="48" viewBox="0 0 48 48" fill="none"
+				     xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+					      d="M30.4921 17.1415C31.0192 17.0056 31.5582 17.3162 31.7048 17.8404C31.8974 18.5285 32
+					      19.2531 32 20C32 24.4183 28.4183 28 24 28C19.5817 28 16 24.4183 16 20C16 19.2531 16.1026
+					      18.5285 16.2952 17.8404C16.4418 17.3162 16.9808 17.0056 17.5079 17.1415C21.2297 18.1011
+					      26.7703 18.1011 30.4921 17.1415ZM18.0387 19.3137C18.0132 19.5387 18 19.7677 18 20C18 23.3137
+					      20.6863 26 24 26C27.3137 26 30 23.3137 30 20C30 19.7677 29.9868 19.5387 29.9613
+					      19.3137C26.3446 20.0437 21.6554 20.0437 18.0387 19.3137Z"
+					      fill="white"></path>
+					<path fill-rule="evenodd" clip-rule="evenodd"
+					      d="M19 28.4896C13.0133 29.5349 6 32.2029 6 36.0001V42.0001H42V36.0001C42 32.2029 34.9867
+					      29.5349 29 28.4896V33H19V28.4896ZM13 42V33H15V42H13ZM34 33V42H36V33H34Z"
+					      fill="white"></path>
+					<path fill-rule="evenodd" clip-rule="evenodd"
+					      d="M25 6.05774V10.4805C25 11.0327 24.5523 11.4805 24 11.4805C23.4477 11.4805 23 11.0327 23
+					      10.4805V6C21.8662 6.069 20.8677 6.31725 20 6.69004V12.4805C20 13.0327 19.5523 13.4805 19
+					      13.4805C18.4477 13.4805 18 13.0327 18 12.4805V7.93466C16.6296 9.11342 15.8407 10.6412 15.589
+					      11.9805C15.5802 12.0274 15.572 12.0742 15.5645 12.1207C15.5581 12.127 15.5517 12.1333 15.5454
+					      12.1396C15.4562 12.7689 15.5052 13.2867 15.633 13.6426C15.8196 14.1624 15.5494 14.7351 15.0296
+					      14.9217C14.5098 15.1083 13.9372 14.8381 13.7506 14.3183C13.7339 14.2719 13.7181 14.225 13.7032
+					      14.1776C7.89609 21.7599 40.1357 21.7558 34.2873 14.1652C34.2721 14.2142 34.256 14.2628 34.2391
+					      14.3111C34.0565 14.8323 33.4859 15.1068 32.9647 14.9242C32.4434 14.7416 32.1689 14.171 32.3516
+					      13.6498C32.4964 13.2364 32.5382 12.7206 32.4595 12.1498C32.4541 12.1458 32.4483 12.1416
+					      32.4421 12.1372C32.2258 10.7852 31.404 9.28999 30 8.11163V12.4805C30 13.0327 29.5523 13.4805
+					      29 13.4805C28.4477 13.4805 28 13.0327 28 12.4805V6.8623C27.6223 6.69204 27.2213 6.54226
+					      26.7972 6.41673C26.2397 6.25338 25.6407 6.13074 25 6.05774Z"
+					      fill="white"></path>
+				</svg>
+				<strong>MueblesStgo</strong>
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+			        aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		</div>
+	</div>
+</header>
+
 <body>
-  <div class="container">
-      <form th:action="@{/extra_data}" method="post">
-        <div class="mb-3">
-          <label for="employeeName1" class="form-label">Empleados</label>
-          <select class="form-select" name="employeeName" id="employeeName1">
-            <option th:each="employee:${employees}"
-                    th:value="${employee.name}"
-                    th:text="${employee.name}">
-            </option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="dateImput1" class="form-label">Fecha de justificativo</label>
-          <input class="form-control" id="dateImput1" name="dateImput" required>
-          <div id="subtitle1" class="form-text">El formato de fecha debe ser año/mes/día "XXXX/XX/XX"</div>
-        </div>
+<main>
+	<section class="album py-3 bg-light">
+		<div class="container">
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-6 center">
+					<h1 class="text-center">Ingreso de justificativos</h1>
+					<form th:action="@{/extra_data}" method="post">
+						<div class="mb-3">
+							<label for="employeeName1" class="form-label">Empleados</label>
+							<select class="form-select" name="employeeName" id="employeeName1">
+								<option th:each="employee:${employees}"
+								        th:value="${employee.name}"
+								        th:text="${employee.name}">
+								</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="dateImput1" class="form-label">Fecha de justificativo</label>
+							<input class="form-control" id="dateImput1" name="dateImput" required>
+							<div id="subtitle1" class="form-text">El formato de fecha debe ser año/mes/día
+								"XXXX/XX/XX"
+							</div>
+						</div>
+						<div class="text-center">
+							<button type="submit" class="btn btn-secondary">Ingresar justificativo</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
-  </div>
+		<div class="container mt-2">
+			<div class="row d-flex justify-content-center">
+				<div class="col-md-6 center">
+					<h1 class="text-center">Ingreso de horas extra</h1>
+					<form th:action="@{/extra_data/hours}" method="post">
+						<div class="mb-3">
+							<label for="employeeName2" class="form-label">Empleados</label>
+							<select class="form-select" name="employeeName" id="employeeName2">
+								<option th:each="employee:${employees}"
+								        th:value="${employee.name}"
+								        th:text="${employee.name}">
+								</option>
+							</select>
+						</div>
+						<div class="mb-3">
+							<label for="extraHours" class="form-label">Horas extra</label>
+							<input class="form-control" id="extraHours" name="extraHours" required>
+							<div id="subtitle2" class="form-text">Ingresar horas totales del mes</div>
+						</div>
+						<div class="text-center">
+							<button type="submit" class="btn btn-secondary">Ingresar horas extra</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
 
-  <div class="container">
-    <form th:action="@{/extra_data/hours}" method="post">
-      <div class="mb-3">
-        <label for="employeeName2" class="form-label">Empleados</label>
-        <select class="form-select" name="employeeName" id="employeeName2">
-          <option th:each="employee:${employees}"
-                  th:value="${employee.name}"
-                  th:text="${employee.name}">
-          </option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label for="extraHours" class="form-label">Horas extra</label>
-        <input class="form-control" id="extraHours" name="extraHours" required>
-        <div id="subtitle2" class="form-text">Ingresar horas totales del mes</div>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-  </div>
+		<div class="text-center">
+			<a href="/spreadsheet" class="btn btn-dark m-3">Mostrar Planilla</a>
+		</div>
 
-  <div class="container">
-    <a href="http://localhost:8080/spreadsheet" class="btn btn-success">Mostrar Planilla</a>
-  </div>
+	</section>
+</main>
 </body>
+
+<footer class="text-muted py-4">
+	<div class="container">
+		<p class="float-end">
+			<a href="https://ibb.co/km4K4Tr"><img src="https://i.ibb.co/VwgVgGh/usach-Logo.png" alt="usach-Logo"
+			                                      border="0"
+			                                      width="225" height="110"></a>
+		</p>
+		<p class="mt-3">Evaluación 1 de Técnicas de Ingeniería de Software.</p>
+		<p class="mt-3">Aplicación web diseñada en base de arquitectura por capas.</p>
+		<p class="mt-3">Creado por Christopher Alejandro Torres Aceituno.</p>
+	</div>
+</footer>
 </html>

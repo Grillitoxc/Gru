@@ -9,7 +9,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.ArrayList;
 
 @SpringBootTest
@@ -88,7 +87,6 @@ class EmployeeeRepositoryTest {
 		}
 		Assertions.assertThat(employees).isNotNull();
 	}
-
 }
 
 @SpringBootTest
