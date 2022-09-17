@@ -13,12 +13,12 @@ public class JustifierEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Getter
     @Setter
-    @Column(unique = true, nullable = false)
+    @Column(unique = true, nullable = false, name = "id")
     private Long id;
 
     @Getter
     @Setter
-    @Column(nullable = false)
+    @Column(nullable = false, name = "date")
     private String date;
 
     @Getter

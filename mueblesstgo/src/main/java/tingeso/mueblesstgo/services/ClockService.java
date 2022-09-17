@@ -12,26 +12,31 @@ import tingeso.mueblesstgo.repositories.JustifierRepository;
 
 @Service
 public class ClockService {
-    @Autowired private JustifierRepository justifierRepository;
-    @Autowired private ClockRepository clockRepository;
-    @Autowired private ExtraHoursRepository extraHoursRepository;
-    @Autowired private EmployeeRepository employeeRepository;
-    @Autowired private EmployeeService employeeService;
+    @Autowired
+    private JustifierRepository justifierRepository;
+    @Autowired
+    private ClockRepository clockRepository;
+    @Autowired
+    private ExtraHoursRepository extraHoursRepository;
+    @Autowired
+    private EmployeeRepository employeeRepository;
+    @Autowired
+    private EmployeeService employeeService;
 
-    public void setJustifier(String dateImput, String employeeName) {
+    public boolean setJustifier(String dateImput, String employeeName) {
         JustifierEntity justifier = new JustifierEntity();
         EmployeeEntity employee = employeeService.getEmployeeByName(employeeName);
-        if (verifyDate(dateImput)) {
-            if ((clockRepository.findByDateAndEmployee(dateImput, employee) == null) ||
-                    (clockRepository.findByDateAndEmployee(dateImput, employee).getDiscount() >= 15)) {
-                justifier.setDate(dateImput);
-                justifier.setName(employeeName);
-                justifierRepository.save(justifier);
-            }
+        if (verifyDate(dateImput) && ((clockRepository.findByDateAndEmployee(dateImput, employee) == null) ||
+                (clockRepository.findByDateAndEmployee(dateImput, employee).getDiscount() >= 15))) {
+            justifier.setDate(dateImput);
+            justifier.setName(employeeName);
+            justifierRepository.save(justifier);
+            return true;
         }
+        return false;
     }
 
-    public void setExtraHours(String employeeName, String extraHours) {
+    public boolean setExtraHours(String employeeName, String extraHours) {
         if (employeeRepository.findByName(employeeName) != null && verifyExtraHours(extraHours) &&
                 extraHoursRepository.findByName(employeeName) == null) {
             int extraHoursInt = Integer.parseInt(extraHours);
@@ -40,8 +45,10 @@ public class ClockService {
                 extraHoursEntity.setName(employeeName);
                 extraHoursEntity.setHours(extraHoursInt);
                 extraHoursRepository.save(extraHoursEntity);
+                return true;
             }
         }
+        return false;
     }
 
     public boolean verifyExtraHours(String extraHours) {
@@ -51,45 +58,43 @@ public class ClockService {
                 if (!Character.isDigit(c))
                     return false;
             }
-            return true;
+            return Integer.parseInt(extraHours) > 0 && Integer.parseInt(extraHours) <= 12;
         }
         return false;
     }
 
-
-    public boolean verifyDate(String dateImput){
+    public boolean verifyDate(String dateImput) {
         if (dateImput.length() != 10)
             return false;
         char firstSlash = dateImput.charAt(4);
         char secondSlash = dateImput.charAt(7);
         if (firstSlash != '/' || secondSlash != '/')
             return false;
-        char[] year = dateImput.substring(0,4).toCharArray();
-        char[] month = dateImput.substring(5,7).toCharArray();
-        char[] day = dateImput.substring(8,10).toCharArray();
-        for (char c : year) {
-            if (!Character.isDigit(c))
-                return false;
-        }
-        for (char c : month) {
-            if (!Character.isDigit(c))
-                return false;
-        }
-        for (char c : day) {
-            if (!Character.isDigit(c))
-                return false;
-        }
-        int yearInt = Integer.parseInt(dateImput.substring(0,4));
-        int monthInt = Integer.parseInt(dateImput.substring(5,7));
-        int dayInt = Integer.parseInt(dateImput.substring(8,10));
-        if (monthInt < 1 || monthInt > 12 || dayInt < 1 || dayInt > 31 || yearInt != 2022)
+        char[] date = (dateImput.substring(0, 4) + dateImput.substring(5, 7) + dateImput.substring(8, 10)).toCharArray();
+        if (!verifyDigits(date))
             return false;
+        return verifyInts(dateImput);
+    }
+
+    private boolean verifyDigits(char[] date) {
+        for (char c : date) {
+            if (!Character.isDigit(c))
+                return false;
+        }
         return true;
     }
 
-    public int calculateDiscount(String hourImput){
-        int hour = Integer.parseInt(hourImput.substring(0,2));
-        int minutes = Integer.parseInt(hourImput.substring(3,5));
+    private boolean verifyInts(String date) {
+        int yearInt = Integer.parseInt(date.substring(0, 4));
+        int monthInt = Integer.parseInt(date.substring(5, 7));
+        int dayInt = Integer.parseInt(date.substring(8, 10));
+        return yearInt >= 2022 && monthInt >= 1 && monthInt <= 12 && dayInt >= 1 && dayInt <= 31;
+    }
+
+
+    public int calculateDiscount(String hourImput) {
+        int hour = Integer.parseInt(hourImput.substring(0, 2));
+        int minutes = Integer.parseInt(hourImput.substring(3, 5));
         if (hour == 8 && minutes > 10 && minutes <= 25)
             return 1;
         else if (hour == 8 && minutes > 25 && minutes <= 45)

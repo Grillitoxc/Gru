@@ -25,7 +25,7 @@ public class ClockEntity {
     @Getter
     @Setter
     @Column(nullable = false)
-    private String check_in_time;
+    private String checkInTime;
 
     @Getter
     @Setter

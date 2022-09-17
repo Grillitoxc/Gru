@@ -1,7 +1,7 @@
 package tingeso.mueblesstgo.services;
 
 import java.io.File;
-import java.io.IOException;
+import java.io.FileNotFoundException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -19,43 +19,51 @@ import tingeso.mueblesstgo.entities.ClockEntity;
 
 @Service
 public class UploadService {
-    @Autowired private ClockRepository clockRepository;
-    @Autowired private EmployeeRepository employeeRepository;
-    @Autowired private ClockService clockService;
+    @Autowired
+    private ClockRepository clockRepository;
+    @Autowired
+    private EmployeeRepository employeeRepository;
+    @Autowired
+    private ClockService clockService;
 
-    private String folder = "mueblesstgo//uploads//";
     private final Logger logger = LoggerFactory.getLogger(UploadService.class);
-    public String saveFile(MultipartFile file) {
-        if (!file.isEmpty()){
+
+    public void saveFile(MultipartFile file) {
+        if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
+                String folder = "mueblesstgo//uploads//";
                 Path path = Paths.get(folder + file.getOriginalFilename());
                 Files.write(path, bytes);
                 logger.info("Archivo guardado.");
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (Exception e) {
+                logger.error("Error al guardar el archivo.");
             }
         }
-        return "Archivo guardado correctamente.";
     }
 
-    private String path = "mueblesstgo//uploads//Data.txt";
-    public String readFile(String filename) {
+    public void readFile() {
+        String path = "mueblesstgo//uploads//Data.txt";
         File file = new File(path);
         String dateTemp = "";
         String checkInTemp = "";
         String rutTemp = "";
+        Scanner scanner = null;
         try {
-            Scanner scanner = new Scanner(file);
+            scanner = new Scanner(file);
+        } catch (FileNotFoundException e) {
+            throw new IllegalArgumentException(e);
+        }
+        try {
             while (scanner.hasNextLine()) {
                 ClockEntity clockTemp = new ClockEntity();
                 String line = scanner.nextLine();
-                dateTemp = line.substring(0,10);
-                checkInTemp = line.substring(11,16);
-                rutTemp = line.substring(17,29);
+                dateTemp = line.substring(0, 10);
+                checkInTemp = line.substring(11, 16);
+                rutTemp = line.substring(17, 29);
                 if (clockRepository.findByDateAndEmployee(dateTemp, employeeRepository.findByRut(rutTemp)) == null) {
                     clockTemp.setDate(dateTemp);
-                    clockTemp.setCheck_in_time(checkInTemp);
+                    clockTemp.setCheckInTime(checkInTemp);
                     clockTemp.setEmployee(employeeRepository.findByRut(rutTemp));
                     if (clockService.calculateDiscount(checkInTemp) == 0)
                         clockTemp.setDiscount(0);
@@ -70,10 +78,8 @@ public class UploadService {
                     clockRepository.save(clockTemp);
                 }
             }
+        } finally {
             scanner.close();
-        } catch (IOException e) {
-            e.printStackTrace();
         }
-        return "Archivo leido correctamente.";
     }
 }

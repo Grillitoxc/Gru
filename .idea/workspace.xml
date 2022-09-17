@@ -6,15 +6,24 @@
   <component name="ChangeListManager">
     <list default="true" id="e8afdd26-88e2-4c65-9991-381554163535" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/MueblesstgoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/MueblesstgoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/ExtrasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/ExtrasController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/SpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/SpreadSheetController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ClockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ClockEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ExtraHoursEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ExtraHoursEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/JustifierEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/JustifierEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/EmployeeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ExtraHoursRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ExtraHoursRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/EmployeeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/employees.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SpreadsheetService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/extras.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/extras.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/spreadsheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/spreadsheet.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/uploads/Data.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,25 +61,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/crisp/OneDrive/Escritorio/Tingeso_Evaluacion1_MueblesStgo/mueblesstgo/src/main/resources/static",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "21bd0c8bdc17a016e904c346fa999c9c"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/crisp/OneDrive/Escritorio/Tingeso_Evaluacion1_MueblesStgo/mueblesstgo/src/main/resources/static&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;21bd0c8bdc17a016e904c346fa999c9c&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\mueblesstgo\src\main\resources\static" />
@@ -198,6 +207,9 @@
       <workItem from="1663178992618" duration="9452000" />
       <workItem from="1663207520037" duration="7709000" />
       <workItem from="1663215286839" duration="5026000" />
+      <workItem from="1663271794099" duration="5385000" />
+      <workItem from="1663279951845" duration="8398000" />
+      <workItem from="1663374868962" duration="7259000" />
     </task>
     <servers />
   </component>

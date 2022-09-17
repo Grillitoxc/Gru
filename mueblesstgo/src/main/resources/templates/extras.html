@@ -104,6 +104,16 @@
 								"XXXX/XX/XX"
 							</div>
 						</div>
+						<v-if th:if="${msgJustifier == true}">
+							<div class="alert alert-success" role="alert">
+								Se ha ingresado el justificativo correctamente.
+							</div>
+						</v-if>
+						<v-else th:if="${msgJustifier == false}">
+							<div class="alert alert-danger" role="alert">
+								No se ha podido ingresar el justificativo, por favor revisa el formato de fecha.
+							</div>
+						</v-else>
 						<div class="text-center">
 							<button type="submit" class="btn btn-secondary">Ingresar justificativo</button>
 						</div>
@@ -129,8 +139,20 @@
 						<div class="mb-3">
 							<label for="extraHours" class="form-label">Horas extra</label>
 							<input class="form-control" id="extraHours" name="extraHours" required>
-							<div id="subtitle2" class="form-text">Ingresar horas totales del mes</div>
+							<div id="subtitle2" class="form-text">Ingresar horas totales del mes (sólo se debe ingresar
+							el total 1 vez</div>
 						</div>
+						<v-if th:if="${msgExtraHour == true}">
+							<div class="alert alert-success" role="alert">
+								Se han ingresado las horas extras correctamente.
+							</div>
+						</v-if>
+						<v-else th:if="${msgExtraHour == false}">
+							<div class="alert alert-danger" role="alert">
+								No se han podido ingresar las horas extra, recuerda que no deben exceder las 12 horas
+								mensuales.
+							</div>
+						</v-else>
 						<div class="text-center">
 							<button type="submit" class="btn btn-secondary">Ingresar horas extra</button>
 						</div>

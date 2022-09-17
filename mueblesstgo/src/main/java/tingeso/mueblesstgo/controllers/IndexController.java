@@ -25,6 +25,4 @@ public class IndexController {
         message.addFlashAttribute("message", "Archivo subido correctamente.");
         return "redirect:/";
     }
-
-
 }

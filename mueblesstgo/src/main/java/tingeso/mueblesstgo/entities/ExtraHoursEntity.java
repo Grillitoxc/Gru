@@ -19,11 +19,11 @@ public class ExtraHoursEntity {
 
     @Getter
     @Setter
-    @Column(nullable = false)
+    @Column(nullable = false, name = "name")
     private String name;
 
     @Getter
     @Setter
-    @Column(nullable = false)
+    @Column(nullable = false, name = "hours")
     private int hours;
 }

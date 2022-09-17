@@ -98,7 +98,7 @@ class ClockRepositoryTest {
 		long id = 1;
 		if (employeeRepository.findById(id).isPresent()) {
 			ClockEntity clock1 = new ClockEntity();
-			clock1.setCheck_in_time("08:00:00");
+			clock1.setCheckInTime("08:00:00");
 			clock1.setDate("2021-05-01");
 			clock1.setEmployee(employeeRepository.findByRut("20.123.456-7"));
 			ClockEntity savedClock = clockRepository.save(clock1);
@@ -146,11 +146,3 @@ class ClockRepositoryTest {
 		}
 	}
 }
-
-class MueblesstgoApplicationTests {
-	@Test
-	void contextLoads() {
-	}
-}
-
-

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 @Repository
 public interface EmployeeRepository extends JpaRepository<EmployeeEntity, Long> {
     EmployeeEntity findByName(String name);
+
     EmployeeEntity findByRut(String rut);
+
     ArrayList<EmployeeEntity> findAll();
 }

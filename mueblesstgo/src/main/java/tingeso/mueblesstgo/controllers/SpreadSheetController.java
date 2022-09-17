@@ -9,16 +9,19 @@ import tingeso.mueblesstgo.services.EmployeeService;
 import tingeso.mueblesstgo.services.SalaryCalculatorService;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class SpreadSheetController {
-    @Autowired private SalaryCalculatorService salaryCalculatorService;
-    @Autowired private EmployeeService employeeService;
+    @Autowired
+    private SalaryCalculatorService salaryCalculatorService;
+    @Autowired
+    private EmployeeService employeeService;
 
     @GetMapping("/spreadsheet")
     public String spreadsheets(Model model) {
         salaryCalculatorService.calculateSalary();
-        ArrayList<EmployeeEntity> employees = employeeService.getAllEmployees();
+        List<EmployeeEntity> employees = employeeService.getAllEmployees();
         model.addAttribute("employees", employees);
         return "spreadsheet";
     }
