@@ -27,7 +27,7 @@ public class ClockService {
         JustifierEntity justifier = new JustifierEntity();
         EmployeeEntity employee = employeeService.getEmployeeByName(employeeName);
         if (verifyDate(dateImput) && ((clockRepository.findByDateAndEmployee(dateImput, employee) == null) ||
-                (clockRepository.findByDateAndEmployee(dateImput, employee).getDiscount() >= 15))) {
+                (clockRepository.findByDateAndEmployee(dateImput, employee).getDiscount() == 15))) {
             justifier.setDate(dateImput);
             justifier.setName(employeeName);
             justifierRepository.save(justifier);
@@ -90,7 +90,6 @@ public class ClockService {
         int dayInt = Integer.parseInt(date.substring(8, 10));
         return yearInt >= 2022 && monthInt >= 1 && monthInt <= 12 && dayInt >= 1 && dayInt <= 31;
     }
-
 
     public int calculateDiscount(String hourImput) {
         int hour = Integer.parseInt(hourImput.substring(0, 2));

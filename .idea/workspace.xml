@@ -6,24 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e8afdd26-88e2-4c65-9991-381554163535" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/MueblesstgoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/MueblesstgoApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/ExtrasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/ExtrasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/SpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/SpreadSheetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ClockEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ClockEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ExtraHoursEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ExtraHoursEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/JustifierEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/JustifierEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/EmployeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/EmployeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ExtraHoursRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ExtraHoursRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/JustifierRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/JustifierRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/EmployeeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SpreadsheetService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/extras.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/extras.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/spreadsheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/spreadsheet.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/uploads/Data.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +28,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/mueblesstgo/pom.xml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -93,8 +83,8 @@
       <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.MueblesstgoApplication">
-    <configuration name="ClockRepositoryTest.testDindDiscountByEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.EmployeeeServiceTest.testGetAllEmployees">
+    <configuration name="ClockServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mueblesstgo" />
       <extension name="coverage">
         <pattern>
@@ -103,14 +93,33 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockRepositoryTest" />
-      <option name="METHOD_NAME" value="testDindDiscountByEmployee" />
+      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <patterns>
+        <pattern testClass="tingeso.mueblesstgo.EmployeeeServiceTest" />
+        <pattern testClass="tingeso.mueblesstgo.ClockServiceTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClockServiceTest.testCalculateDiscount" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="mueblesstgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tingeso.mueblesstgo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
+      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockServiceTest" />
+      <option name="METHOD_NAME" value="testCalculateDiscount" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClockRepositoryTest.testFindAllByEmployeeContaining" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClockServiceTest.testVerifyDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mueblesstgo" />
       <extension name="coverage">
         <pattern>
@@ -119,14 +128,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockRepositoryTest" />
-      <option name="METHOD_NAME" value="testFindAllByEmployeeContaining" />
+      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockServiceTest" />
+      <option name="METHOD_NAME" value="testVerifyDate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClockRepositoryTest.testFindAllDiscountByEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClockServiceTest.testVerifyExtraHours" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mueblesstgo" />
       <extension name="coverage">
         <pattern>
@@ -135,14 +144,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockRepositoryTest" />
-      <option name="METHOD_NAME" value="testFindAllDiscountByEmployee" />
+      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockServiceTest" />
+      <option name="METHOD_NAME" value="testVerifyExtraHours" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClockRepositoryTest.testFindDiscountByEmployee" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmployeeeServiceTest.testGetAllEmployees" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mueblesstgo" />
       <extension name="coverage">
         <pattern>
@@ -151,24 +160,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockRepositoryTest" />
-      <option name="METHOD_NAME" value="testFindDiscountByEmployee" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeeRepositoryTest.insertAllEmployees" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mueblesstgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tingeso.mueblesstgo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.EmployeeeRepositoryTest" />
-      <option name="METHOD_NAME" value="insertAllEmployees" />
+      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.EmployeeeServiceTest" />
+      <option name="METHOD_NAME" value="testGetAllEmployees" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -183,11 +176,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EmployeeeRepositoryTest.insertAllEmployees" />
-        <item itemvalue="JUnit.ClockRepositoryTest.testFindAllByEmployeeContaining" />
-        <item itemvalue="JUnit.ClockRepositoryTest.testFindDiscountByEmployee" />
-        <item itemvalue="JUnit.ClockRepositoryTest.testDindDiscountByEmployee" />
-        <item itemvalue="JUnit.ClockRepositoryTest.testFindAllDiscountByEmployee" />
+        <item itemvalue="JUnit.EmployeeeServiceTest.testGetAllEmployees" />
+        <item itemvalue="JUnit.ClockServiceTest" />
+        <item itemvalue="JUnit.ClockServiceTest.testCalculateDiscount" />
+        <item itemvalue="JUnit.ClockServiceTest.testVerifyDate" />
+        <item itemvalue="JUnit.ClockServiceTest.testVerifyExtraHours" />
       </list>
     </recent_temporary>
   </component>
@@ -230,5 +223,29 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java</url>
+          <line>41</line>
+          <properties class="tingeso.mueblesstgo.EmployeeeServiceTest" method="testGetEmployeeByName">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java</url>
+          <line>108</line>
+          <properties class="tingeso.mueblesstgo.ClockServiceTest" method="testSetExtraHours">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
