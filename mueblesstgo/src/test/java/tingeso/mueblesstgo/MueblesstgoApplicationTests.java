@@ -32,10 +32,20 @@ class EmployeeeServiceTest {
 
     @Test
     void testGetAllEmployees() {
+        // given
+        EmployeeEntity employeeTemp = new EmployeeEntity();
+        employeeTemp.setName(name);
+        employeeTemp.setRut(rut);
+        employeeTemp.setCategory(category);
+        employeeTemp.setDateOfAdmission(dateOfAdmission);
+        employeeTemp.setYearsOfService(yearsOfService);
+        employeeRepository.save(employeeTemp);
         // when
         List<EmployeeEntity> employees = employeeService.getAllEmployees();
         // then
         assertThat(employees.size()).isGreaterThan(0);
+        // clean
+        employeeRepository.delete(employeeTemp);
     }
 
     @Test
