@@ -1,5 +1,7 @@
 package tingeso.mueblesstgo.controllers;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import tingeso.mueblesstgo.services.EmployeeService;
 import tingeso.mueblesstgo.services.UploadService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +15,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class IndexController {
     @Autowired
     private UploadService uploadService;
+    @Autowired
+    private EmployeeService employeeService;
+
+    @RequestMapping("/insert_data")
+    public String insertData() {
+        employeeService.fillDatabase();
+        return "redirect:/";
+    }
 
     @GetMapping("/")
     public String index() {
