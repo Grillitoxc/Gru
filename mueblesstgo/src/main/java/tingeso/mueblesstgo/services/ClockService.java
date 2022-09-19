@@ -76,7 +76,7 @@ public class ClockService {
         return verifyInts(dateImput);
     }
 
-    private boolean verifyDigits(char[] date) {
+    public boolean verifyDigits(char[] date) {
         for (char c : date) {
             if (!Character.isDigit(c))
                 return false;
@@ -84,7 +84,7 @@ public class ClockService {
         return true;
     }
 
-    private boolean verifyInts(String date) {
+    public boolean verifyInts(String date) {
         int yearInt = Integer.parseInt(date.substring(0, 4));
         int monthInt = Integer.parseInt(date.substring(5, 7));
         int dayInt = Integer.parseInt(date.substring(8, 10));
