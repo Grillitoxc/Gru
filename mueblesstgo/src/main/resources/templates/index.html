@@ -20,11 +20,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-8 col-md-7 py-4">
-					<h4 class="text-white">Antes de usar la aplciación</h4>
+					<h4 class="text-white">Antes de usar la aplicación</h4>
 					<p class="text-muted">Debido a que está fuera del alcance de la aplicación, existe un método que
 					llena la base de datos con empleados ficticios y así poder simular la aplicación con los datos
 					de ejemplo.</p>
-					<a th:action="@{/insert_data}" href="http://localhost:8080/insert_data"
+					<a th:action="@{/insert_data}" href="/insert_data"
 					   class="btn btn-secondary mt-3">Ingresar empleados ficticios</a>
 				</div>
 				<div class="col-sm-4 offset-md-1 py-4">
@@ -114,7 +114,7 @@
 					</div>
 
 					<div class="container">
-						<a th:action="@{/extra_data}" href="http://localhost:8080/extra_data"
+						<a th:action="@{/extra_data}" th:href="@{/extra_data}"
 						   class="btn btn-secondary mt-3">Ingresar justificativos y horas extra</a>
 					</div>
 				</div>

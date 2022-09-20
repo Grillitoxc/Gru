@@ -32,7 +32,7 @@ public class UploadService {
         if (!file.isEmpty()) {
             try {
                 byte[] bytes = file.getBytes();
-                String folder = "mueblesstgo//uploads//";
+                String folder = "mueblesstgo//src//main//resources//static//uploads//";
                 Path path = Paths.get(folder + file.getOriginalFilename());
                 Files.write(path, bytes);
                 logger.info("Archivo guardado.");
@@ -43,18 +43,13 @@ public class UploadService {
     }
 
     public void readFile() {
-        String path = "mueblesstgo//uploads//Data.txt";
+        String path = "mueblesstgo//src//main//resources//static//uploads//";
         File file = new File(path);
         String dateTemp = "";
         String checkInTemp = "";
         String rutTemp = "";
-        Scanner scanner = null;
         try {
-            scanner = new Scanner(file);
-        } catch (FileNotFoundException e) {
-            throw new IllegalArgumentException(e);
-        }
-        try {
+            Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 ClockEntity clockTemp = new ClockEntity();
                 String line = scanner.nextLine();
@@ -78,8 +73,8 @@ public class UploadService {
                     clockRepository.save(clockTemp);
                 }
             }
-        } finally {
-            scanner.close();
+        } catch (FileNotFoundException e) {
+            logger.error("Error al leer el archivo.");
         }
     }
 }

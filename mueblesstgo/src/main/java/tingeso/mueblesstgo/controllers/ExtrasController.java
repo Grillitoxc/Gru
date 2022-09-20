@@ -5,6 +5,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import tingeso.mueblesstgo.entities.EmployeeEntity;
 import tingeso.mueblesstgo.services.ClockService;
@@ -12,9 +13,9 @@ import tingeso.mueblesstgo.services.EmployeeService;
 import tingeso.mueblesstgo.services.UploadService;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
 import java.util.List;
 
+@RequestMapping
 @Controller
 public class ExtrasController {
     @Autowired
@@ -32,7 +33,7 @@ public class ExtrasController {
         return "extras";
     }
 
-    @PostMapping("/extra_data")
+    @PostMapping("/extra_data/justifier")
     public String getJustifiers(@RequestParam("dateImput") String dateImput, @RequestParam("employeeName") String employeeName, RedirectAttributes ms) {
         boolean mensaje = clockService.setJustifier(dateImput, employeeName);
         ms.addFlashAttribute("msgJustifier", mensaje);
