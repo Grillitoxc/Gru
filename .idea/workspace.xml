@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e8afdd26-88e2-4c65-9991-381554163535" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/.scannerwork/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/.scannerwork/report-task.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -83,7 +82,7 @@
       <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\.idea" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClockServiceTest.testVerifyDigits">
+  <component name="RunManager" selected="JUnit.ClockServiceTest.testVerifyInts">
     <configuration name="ClockServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mueblesstgo" />
       <extension name="coverage">
@@ -176,8 +175,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClockServiceTest.testVerifyDigits" />
         <item itemvalue="JUnit.ClockServiceTest.testVerifyInts" />
+        <item itemvalue="JUnit.ClockServiceTest.testVerifyDigits" />
         <item itemvalue="JUnit.ClockServiceTest.testSetExtraHours" />
         <item itemvalue="JUnit.EmployeeeServiceTest.testGetAllEmployees" />
         <item itemvalue="JUnit.ClockServiceTest" />
@@ -206,7 +205,7 @@
       <workItem from="1663556050215" duration="647000" />
       <workItem from="1663608962506" duration="688000" />
       <workItem from="1663612646018" duration="849000" />
-      <workItem from="1663624501566" duration="3024000" />
+      <workItem from="1663624501566" duration="5892000" />
     </task>
     <servers />
   </component>
@@ -248,6 +247,15 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java</url>
+          <line>178</line>
+          <properties class="tingeso.mueblesstgo.ClockServiceTest" method="testVerifyInts">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

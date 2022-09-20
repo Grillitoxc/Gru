@@ -15,6 +15,10 @@
     <description>Gestionador de sueldos para MueblesStgo</description>
     <properties>
         <java.version>18</java.version>
+        <sonar.exclusions>
+            src/main/java/tingeso/mueblesstgo/Controllers,
+            src/main/java/tingeso/mueblesstgo/Entities
+        </sonar.exclusions>
     </properties>
     <dependencies>
         <dependency>

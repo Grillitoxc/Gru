@@ -177,18 +177,26 @@ class ClockServiceTest {
 
     @Test
     void testVerifyInts() {
+        // given
+        String date2 = "2021/01/01";
         // when
-        boolean result = clockService.verifyInts(date);
+        boolean result1 = clockService.verifyInts(date);
+        boolean result2 = clockService.verifyInts(date2);
         // then
-        assertThat(result).isTrue();
+        assertThat(result1).isTrue();
+        assertThat(result2).isFalse();
     }
 
     @Test
     void testVerifyDigits() {
+        // given
+        char[] array = {'A', '2', '3', '4', 'C', '6', '7', '8', '9', '0'};
         // when
-        boolean result = clockService.verifyDigits(dateDigts);
+        boolean result1 = clockService.verifyDigits(dateDigts);
+        boolean result2 = clockService.verifyDigits(array);
         // then
-        assertThat(result).isTrue();
+        assertThat(result1).isTrue();
+        assertThat(result2).isFalse();
     }
 }
 
