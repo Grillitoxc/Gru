@@ -6,14 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e8afdd26-88e2-4c65-9991-381554163535" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/ExtrasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/ExtrasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/SpreadSheetController.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/SpreadSheetController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/extras.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/extras.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/uploads/Data.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +206,8 @@
       <workItem from="1663608962506" duration="688000" />
       <workItem from="1663612646018" duration="849000" />
       <workItem from="1663624501566" duration="15171000" />
-      <workItem from="1663645591192" duration="2679000" />
+      <workItem from="1663645591192" duration="2824000" />
+      <workItem from="1663714402450" duration="2654000" />
     </task>
     <servers />
   </component>

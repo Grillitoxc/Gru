@@ -7,7 +7,7 @@ services:
     environment:
       - POSTGRES_DB=MueblesStgo
       - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=93304596
+      - POSTGRES_PASSWORD=lmao2
     volumes:
       - /var/lib/postgresql/data
     ports:
@@ -23,7 +23,7 @@ services:
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/MueblesStgo
       - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=93304596
+      - SPRING_DATASOURCE_PASSWORD=lmao2
       - SPRING_JPA_HIBERNATE_DDL_AUTO=update
     ports:
       - "8081:8081"
