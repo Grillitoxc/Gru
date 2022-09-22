@@ -4,33 +4,59 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8afdd26-88e2-4c65-9991-381554163535" name="Changes" comment="">
+    <list default="true" id="057df73b-b8e1-4fa8-8a91-fe3352dafd20" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Tingeso_Evaluacion1_MueblesStgo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/mueblesstgo/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/.scannerwork/.sonar_lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/.scannerwork/report-task.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/sonar-project.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/MueblesstgoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/ExtrasController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/IndexController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/controllers/SpreadSheetController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ClockEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/EmployeeEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/ExtraHoursEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/entities/JustifierEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ClockRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/EmployeeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/ExtraHoursRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/repositories/JustifierRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/UploadService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/static/logo.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/static/uploads/Data.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/static/usachLogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/extras.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/main/resources/templates/spreadsheet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="HTTP Request" />
-        <option value="Interface" />
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/mueblesstgo/pom.xml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/mueblesstgo/src/main/java/tingeso/mueblesstgo/services/ClockService.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,205 +64,50 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2EV6mi0t5NqSVMFPVxEPeZWVu9c" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2F6licuUYf0LzR3mvYMf2DMvkuq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/crisx/Desktop/Gru",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "spring.configuration.checksum": "21bd0c8bdc17a016e904c346fa999c9c"
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\mueblesstgo\src\main\resources\static" />
-      <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\mueblesstgo\src\main\resources\templates" />
-      <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\mueblesstgo\src\main\resources\static.images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\crisx\Desktop\Gru\mueblesstgo" />
-      <recent name="C:\Users\crisx\Desktop\Gru" />
-      <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\mueblesstgo\src\main\resources\static" />
-      <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\mueblesstgo\src\main\resources\static.images" />
-      <recent name="C:\Users\crisp\OneDrive\Escritorio\Tingeso_Evaluacion1_MueblesStgo\mueblesstgo\src\main\resources\static\css" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Spring Boot.MueblesstgoApplication">
-    <configuration name="ClockServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mueblesstgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tingeso.mueblesstgo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <patterns>
-        <pattern testClass="tingeso.mueblesstgo.EmployeeeServiceTest" />
-        <pattern testClass="tingeso.mueblesstgo.ClockServiceTest" />
-      </patterns>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClockServiceTest.testSetExtraHours" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mueblesstgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tingeso.mueblesstgo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockServiceTest" />
-      <option name="METHOD_NAME" value="testSetExtraHours" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClockServiceTest.testVerifyDigits" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mueblesstgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tingeso.mueblesstgo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockServiceTest" />
-      <option name="METHOD_NAME" value="testVerifyDigits" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClockServiceTest.testVerifyInts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mueblesstgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tingeso.mueblesstgo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.ClockServiceTest" />
-      <option name="METHOD_NAME" value="testVerifyInts" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmployeeeServiceTest.testGetAllEmployees" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="mueblesstgo" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tingeso.mueblesstgo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tingeso.mueblesstgo" />
-      <option name="MAIN_CLASS_NAME" value="tingeso.mueblesstgo.EmployeeeServiceTest" />
-      <option name="METHOD_NAME" value="testGetAllEmployees" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="mueblesstgo" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="mueblesstgo" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="MueblesstgoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="mueblesstgo" />
+      <module name="Gru" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="tingeso.mueblesstgo.MueblesstgoApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.ClockServiceTest.testVerifyInts" />
-        <item itemvalue="JUnit.ClockServiceTest.testVerifyDigits" />
-        <item itemvalue="JUnit.ClockServiceTest.testSetExtraHours" />
-        <item itemvalue="JUnit.EmployeeeServiceTest.testGetAllEmployees" />
-        <item itemvalue="JUnit.ClockServiceTest" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e8afdd26-88e2-4c65-9991-381554163535" name="Changes" comment="" />
-      <created>1662668566957</created>
+      <changelist id="057df73b-b8e1-4fa8-8a91-fe3352dafd20" name="Changes" comment="" />
+      <created>1663820542625</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1662668566957</updated>
-      <workItem from="1662668567934" duration="7887000" />
-      <workItem from="1662681540703" duration="4249000" />
-      <workItem from="1662830333004" duration="14192000" />
-      <workItem from="1663001931119" duration="40267000" />
-      <workItem from="1663120747561" duration="7072000" />
-      <workItem from="1663178992618" duration="9452000" />
-      <workItem from="1663207520037" duration="7709000" />
-      <workItem from="1663215286839" duration="5026000" />
-      <workItem from="1663271794099" duration="5385000" />
-      <workItem from="1663279951845" duration="8398000" />
-      <workItem from="1663374868962" duration="7259000" />
-      <workItem from="1663556050215" duration="647000" />
-      <workItem from="1663608962506" duration="688000" />
-      <workItem from="1663612646018" duration="849000" />
-      <workItem from="1663624501566" duration="15171000" />
-      <workItem from="1663645591192" duration="2824000" />
-      <workItem from="1663714402450" duration="2654000" />
-      <workItem from="1663798108417" duration="101000" />
-      <workItem from="1663802431976" duration="2419000" />
-      <workItem from="1663804979417" duration="873000" />
-      <workItem from="1663806318699" duration="849000" />
-      <workItem from="1663807830674" duration="1794000" />
+      <updated>1663820542625</updated>
+      <workItem from="1663820544104" duration="43000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="UnknownFeatures">
-    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
-    <option featureType="dependencySupport" implementationName="java:org.hibernate:hibernate-core" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -248,38 +119,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java</url>
-          <line>51</line>
-          <properties class="tingeso.mueblesstgo.EmployeeeServiceTest" method="testGetEmployeeByName">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java</url>
-          <line>119</line>
-          <properties class="tingeso.mueblesstgo.ClockServiceTest" method="testSetExtraHours">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/mueblesstgo/src/test/java/tingeso/mueblesstgo/MueblesstgoApplicationTests.java</url>
-          <line>178</line>
-          <properties class="tingeso.mueblesstgo.ClockServiceTest" method="testVerifyInts">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
