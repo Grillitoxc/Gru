@@ -10,9 +10,12 @@ pipeline {
                 bat 'mvn clean install -DskipTests'
             }
         }
-        stage('Tests') {
+        stage('Sonarqube Analysis') {
             steps {
-                echo "Aquí va sonarqube"
+                def mvnHome = tool 'maven-3.8.6', type: 'maven'
+                withSonarQubeEnv('SonarQube') {
+                    bat '${mvnHome}/bin/mvn sonar:sonar'
+                }
             }
         }
         stage('Build Docker Image') {
