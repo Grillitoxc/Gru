@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'dckrhubpassword', variable: 'dckpass')]) {
-                        bat 'docker login -u grillitoxc -p ${dckpass}
+                        bat 'docker login -u grillitoxc -p ${dckpass}'
                     }
                     bat 'docker push grillitoxc/mueblesstgo'
                 }
