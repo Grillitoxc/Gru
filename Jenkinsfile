@@ -11,8 +11,8 @@ pipeline {
             }
         }
         stage('Sonarqube Analysis') {
+            def mvnHome = tool 'maven-3.8.6', type: 'maven'
             steps {
-                def mvnHome = tool 'maven-3.8.6', type: 'maven'
                 withSonarQubeEnv('SonarQube') {
                     bat '${mvnHome}/bin/mvn sonar:sonar'
                 }
