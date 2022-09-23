@@ -10,12 +10,9 @@ pipeline {
                 bat 'mvn clean install -DskipTests'
             }
         }
-        stage('Sonarqube Analysis') {
-            def mvnHome = tool 'maven-3.8.6', type: 'maven'
+        stage('Sonarqube Analysis without Tests') {
             steps {
-                withSonarQubeEnv('SonarQube') {
-                    bat '${mvnHome}/bin/mvn sonar:sonar'
-                }
+                bat 'sonar-scanner'
             }
         }
         stage('Build Docker Image') {
@@ -26,8 +23,8 @@ pipeline {
         stage('Push docker image') {
             steps {
                 script {
-                    withCredentials([string(credentialsId: 'dckrhubpassword', variable: 'dckpass')]) {
-                        bat 'docker login -u grillitoxc -p ${dckpass}'
+                    withCredentials([string(credentialsId: 'dockerhub', variable: 'dockerpass')]) {
+                        bat 'docker login -u grillitoxc -p %dockerpass%'
                     }
                     bat 'docker push grillitoxc/mueblesstgo'
                 }

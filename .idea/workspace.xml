@@ -5,6 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="057df73b-b8e1-4fa8-8a91-fe3352dafd20" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.scannerwork/report-task.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.scannerwork/report-task.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,16 +40,24 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/crisx/Desktop/Gru",
+    "last_opened_file_path": "C:/Users/crisx/Desktop/MueblesStgo",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "show.run.dashboard.notification": "false"
   }
 }]]></component>
   <component name="RunManager" selected="Spring Boot.MueblesstgoApplication">
     <configuration name="dashboard" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:9000/dashboard?id=proyectoMueblesStgo">
       <method v="2" />
+    </configuration>
+    <configuration name="MueblesstgoApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="mueblesstgo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="tingeso.mueblesstgo.MueblesstgoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="MueblesstgoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="Gru" />
@@ -69,6 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663820542625</updated>
       <workItem from="1663820544104" duration="2289000" />
+      <workItem from="1663888896191" duration="1055000" />
     </task>
     <servers />
   </component>
