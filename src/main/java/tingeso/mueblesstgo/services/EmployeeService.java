@@ -1,5 +1,6 @@
 package tingeso.mueblesstgo.services;
 
+import lombok.Generated;
 import org.springframework.stereotype.Service;
 import tingeso.mueblesstgo.repositories.EmployeeRepository;
 import tingeso.mueblesstgo.entities.EmployeeEntity;
@@ -18,6 +19,7 @@ public class EmployeeService {
         return employeeRepository.findByName(name);
     }
 
+    @Generated
     public void fillDatabase() {
         int actualYear = 2022;
         EmployeeEntity employee1 = new EmployeeEntity();

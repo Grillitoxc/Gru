@@ -16,7 +16,6 @@ import tingeso.mueblesstgo.repositories.EmployeeRepository;
 import tingeso.mueblesstgo.repositories.ClockRepository;
 import tingeso.mueblesstgo.entities.ClockEntity;
 
-
 @Service
 public class UploadService {
     @Autowired

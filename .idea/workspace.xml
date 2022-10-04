@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="057df73b-b8e1-4fa8-8a91-fe3352dafd20" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tingeso/mueblesstgo/services/SalaryCalculatorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tingeso/mueblesstgo/MueblesstgoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tingeso/mueblesstgo/MueblesstgoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tingeso/mueblesstgo/services/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tingeso/mueblesstgo/services/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tingeso/mueblesstgo/services/UploadService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tingeso/mueblesstgo/services/UploadService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +90,7 @@
       <workItem from="1664746588293" duration="65000" />
       <workItem from="1664746677335" duration="2124000" />
       <workItem from="1664750022336" duration="1000" />
-      <workItem from="1664912875609" duration="3210000" />
+      <workItem from="1664912875609" duration="3692000" />
     </task>
     <servers />
   </component>
