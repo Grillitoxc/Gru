@@ -1,5 +1,6 @@
 package tingeso.mueblesstgo.services;
 
+import lombok.Generated;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tingeso.mueblesstgo.entities.EmployeeEntity;
@@ -23,6 +24,7 @@ public class ClockService {
     @Autowired
     private EmployeeService employeeService;
 
+    @Generated
     public boolean setJustifier(String dateImput, String employeeName) {
         JustifierEntity justifier = new JustifierEntity();
         EmployeeEntity employee = employeeService.getEmployeeByName(employeeName);
@@ -36,6 +38,7 @@ public class ClockService {
         return false;
     }
 
+    @Generated
     public boolean setExtraHours(String employeeName, String extraHours) {
         if (employeeRepository.findByName(employeeName) != null && verifyExtraHours(extraHours) &&
                 extraHoursRepository.findByName(employeeName) == null) {
