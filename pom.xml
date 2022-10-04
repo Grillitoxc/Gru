@@ -17,7 +17,9 @@
         <java.version>17</java.version>
         <sonar.exclusions>
             src/main/java/tingeso/mueblesstgo/controllers/*,
-            src/main/java/tingeso/mueblesstgo/entities/*
+            src/main/java/tingeso/mueblesstgo/entities/*,
+            src/main/java/tingeso/mueblesstgo/repositories/*,
+            src/main/java/tingeso/mueblesstgo/services/UploadService.java
         </sonar.exclusions>
     </properties>
     <dependencies>

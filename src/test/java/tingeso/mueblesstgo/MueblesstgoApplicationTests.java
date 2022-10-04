@@ -44,7 +44,7 @@ class EmployeeeServiceTest {
         // when
         List<EmployeeEntity> employees = employeeService.getAllEmployees();
         // then
-        assertThat(employees.size()).isGreaterThan(0);
+        assertThat(employees).isNotEmpty();
         // clean
         employeeRepository.delete(employeeTemp);
     }
@@ -156,7 +156,7 @@ class ClockServiceTest {
         // when
         boolean result = clockService.verifyDate(date);
         // then
-        assertThat(result).isEqualTo(true);
+        assertThat(result).isTrue();
         assertThat(clockService.verifyDate("2021-01/01")).isFalse();
         assertThat(clockService.verifyDate("2021-01-01-01")).isFalse();
         assertThat(clockService.verifyDate("2022/09/18")).isTrue();
