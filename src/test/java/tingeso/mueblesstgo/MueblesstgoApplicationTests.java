@@ -93,11 +93,13 @@ class ClockServiceTest {
     String hourImput2 = "09:00";
     String hourImput3 = "10:00";
     String hourImput4 = "08:26";
+    String hourImput5 = "08:16";
     char[] dateDigts = (date.substring(0, 4) + date.substring(5, 7) + date.substring(8, 10)).toCharArray();
 
     @Test
     void testSetJustifier() {
         // given
+        String date2 = "2022-08-02";
         EmployeeEntity employeeTemp = new EmployeeEntity();
         employeeTemp.setName(name);
         employeeTemp.setRut(rut);
@@ -107,9 +109,11 @@ class ClockServiceTest {
         employeeRepository.save(employeeTemp);
         // when
         boolean result = clockService.setJustifier(date, name);
+        boolean result2 = clockService.setJustifier(date2, name);
         // then
         assertThat(result).isTrue();
         assertThat(justifierRepository.findByDateAndName(date, name)).isNotNull();
+        assertThat(result2).isFalse();
         // clean
         JustifierEntity justifier = justifierRepository.findByDateAndName(date, name);
         justifierRepository.delete(justifier);
@@ -120,6 +124,7 @@ class ClockServiceTest {
     @Test
     void testSetExtraHours() {
         // given
+        String extraHours2 = "-1";
         EmployeeEntity employeeTemp = new EmployeeEntity();
         employeeTemp.setName(name);
         employeeTemp.setRut(rut);
@@ -129,9 +134,11 @@ class ClockServiceTest {
         employeeRepository.save(employeeTemp);
         // when
         boolean result = clockService.setExtraHours(name, extraHours);
+        boolean result2 = clockService.setExtraHours(name, extraHours2);
         // then
         assertThat(result).isTrue();
         assertThat(extraHoursRepository.findByName(name).getHours()).isEqualTo(10);
+        assertThat(result2).isFalse();
         // clean
         ExtraHoursEntity extraHoursEntity = extraHoursRepository.findByName(name);
         extraHoursRepository.delete(extraHoursEntity);
@@ -160,6 +167,8 @@ class ClockServiceTest {
         assertThat(clockService.verifyDate("2021-01/01")).isFalse();
         assertThat(clockService.verifyDate("2021-01-01-01")).isFalse();
         assertThat(clockService.verifyDate("2022/09/18")).isTrue();
+        assertThat(clockService.verifyDate("asdd/ad/as")).isFalse();
+        assertThat(clockService.verifyDate("2021110101")).isFalse();
     }
 
     @Test
@@ -169,23 +178,35 @@ class ClockServiceTest {
         int result2 = clockService.calculateDiscount(hourImput2);
         int result3 = clockService.calculateDiscount(hourImput3);
         int result4 = clockService.calculateDiscount(hourImput4);
+        int result5 = clockService.calculateDiscount(hourImput5);
         // then
         assertThat(result1).isZero();
         assertThat(result2).isEqualTo(6);
         assertThat(result3).isEqualTo(-1);
         assertThat(result4).isEqualTo(3);
+        assertThat(result5).isOne();
+
     }
 
     @Test
     void testVerifyInts() {
         // given
         String date2 = "2021/01/01";
+        String date3 = "1233/42/24";
+        String date4 = "2021/01/40";
+        String date5 = "2021/50/01";
         // when
         boolean result1 = clockService.verifyInts(date);
         boolean result2 = clockService.verifyInts(date2);
+        boolean result3 = clockService.verifyInts(date3);
+        boolean result4 = clockService.verifyInts(date4);
+        boolean result5 = clockService.verifyInts(date5);
         // then
         assertThat(result1).isTrue();
         assertThat(result2).isFalse();
+        assertThat(result3).isFalse();
+        assertThat(result4).isFalse();
+        assertThat(result5).isFalse();
     }
 
     @Test
