@@ -13,9 +13,6 @@ import java.util.ArrayList;
 
 @Service
 public class SalaryCalculatorService {
-    public static final String ANSI_RESET = "\u001B[0m";
-    public static final String ANSI_RED_BACKGROUND = "\u001B[41m";
-
     @Autowired
     private ClockRepository clockRepository;
     @Autowired
@@ -25,7 +22,7 @@ public class SalaryCalculatorService {
     @Autowired
     private JustifierRepository justifierRepository;
 
-    private int checkExtraHours(EmployeeEntity employee) {
+    public int checkExtraHours(EmployeeEntity employee) {
         char category = employee.getCategory();
         int multiplier = 1;
         if (extraHoursRepository.findByName(employee.getName()) != null) {
@@ -40,7 +37,7 @@ public class SalaryCalculatorService {
         return 0;
     }
 
-    private int calculateYearsOfServiceBonus(EmployeeEntity employee) {
+    public int calculateYearsOfServiceBonus(EmployeeEntity employee) {
         int years = employee.getYearsOfService();
         int yearsBonus;
         if (years >= 5 && years < 10)
@@ -51,14 +48,14 @@ public class SalaryCalculatorService {
             yearsBonus = 11;
         else if (years >= 20 && years < 25)
             yearsBonus = 14;
-        else if (years >= 25 && years < 30)
+        else if (years >= 25)
             yearsBonus = 17;
         else
             yearsBonus = 0;
         return yearsBonus;
     }
 
-    private void setFixedSalary(EmployeeEntity employee) {
+    public void setFixedSalary(EmployeeEntity employee) {
         char category = employee.getCategory();
         if (category == 'A')
             employee.setFixedSalary(1700000);
@@ -68,7 +65,7 @@ public class SalaryCalculatorService {
             employee.setFixedSalary(800000);
     }
 
-    private int checkAndSetJustifiers(EmployeeEntity employee) {
+    public int checkAndSetJustifiers(EmployeeEntity employee) {
         int discountsByMissing = 0;
         for (int i = 17; i <= 22; i++) {
             String date = "2022/08/" + i;
@@ -87,7 +84,7 @@ public class SalaryCalculatorService {
         return discountsByMissing;
     }
 
-    private int addDiscounts(EmployeeEntity employee) {
+    public int addDiscounts(EmployeeEntity employee) {
         int totalDiscount = 0;
         ArrayList<Integer> discounts = clockRepository.findDiscountByEmployee(employee);
         for (Integer discount : discounts) {
@@ -135,7 +132,7 @@ public class SalaryCalculatorService {
         }
     }
 
-    private void setAllAndSave(double yearBonusMoney, double totalDiscountsMoney, int extraHoursMoney,
+    public void setAllAndSave(double yearBonusMoney, double totalDiscountsMoney, int extraHoursMoney,
                                double forecastQuoteMoney, double healthQuoteMoney, double netSalary,
                                EmployeeEntity employee) {
         employee.setYearsOfServiceBonus(yearBonusMoney);
@@ -147,7 +144,7 @@ public class SalaryCalculatorService {
         employeeRepository.save(employee);
     }
 
-    private static Double formatterDecimals(Double numero) {
+    public Double formatterDecimals(Double numero) {
         return Math.round(numero * Math.pow(10, 2)) / Math.pow(10, 2);
     }
 }
