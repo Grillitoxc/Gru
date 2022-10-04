@@ -66,6 +66,7 @@ public class SalaryCalculatorService {
             employee.setFixedSalary(800000);
     }
 
+    @Generated
     public int checkAndSetJustifiers(EmployeeEntity employee) {
         int discountsByMissing = 0;
         for (int i = 17; i <= 22; i++) {
@@ -85,6 +86,7 @@ public class SalaryCalculatorService {
         return discountsByMissing;
     }
 
+    @Generated
     public int addDiscounts(EmployeeEntity employee) {
         int totalDiscount = 0;
         ArrayList<Integer> discounts = clockRepository.findDiscountByEmployee(employee);
