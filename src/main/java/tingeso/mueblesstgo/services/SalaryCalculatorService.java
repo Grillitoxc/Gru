@@ -8,6 +8,7 @@ import tingeso.mueblesstgo.repositories.ClockRepository;
 import tingeso.mueblesstgo.repositories.EmployeeRepository;
 import tingeso.mueblesstgo.repositories.ExtraHoursRepository;
 import tingeso.mueblesstgo.repositories.JustifierRepository;
+import lombok.Generated;
 
 import java.util.ArrayList;
 
@@ -93,6 +94,7 @@ public class SalaryCalculatorService {
         return totalDiscount;
     }
 
+    @Generated
     public void calculateSalary() {
         ArrayList<EmployeeEntity> employees = employeeRepository.findAll();
         for (EmployeeEntity employee : employees) {
@@ -132,6 +134,7 @@ public class SalaryCalculatorService {
         }
     }
 
+    @Generated
     public void setAllAndSave(double yearBonusMoney, double totalDiscountsMoney, int extraHoursMoney,
                                double forecastQuoteMoney, double healthQuoteMoney, double netSalary,
                                EmployeeEntity employee) {
