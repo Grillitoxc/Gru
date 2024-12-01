@@ -7,12 +7,15 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import tingeso.mueblesstgo.dtos.ExtraInformationEmployee;
 import tingeso.mueblesstgo.entities.EmployeeEntity;
 import tingeso.mueblesstgo.services.ClockService;
 import tingeso.mueblesstgo.services.EmployeeService;
+import tingeso.mueblesstgo.services.SalaryCalculatorService;
 import tingeso.mueblesstgo.services.UploadService;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RequestMapping
@@ -24,6 +27,7 @@ public class ExtrasController {
     private UploadService uploadService;
     @Autowired
     private EmployeeService employeeService;
+    @Autowired SalaryCalculatorService salaryCalculatorService;
 
     @GetMapping("/extra_data")
     public String spreadsheets(Model model) {
@@ -45,5 +49,12 @@ public class ExtrasController {
         boolean mensaje = clockService.setExtraHours(employeeName, extraHours);
         ms.addFlashAttribute("msgExtraHour", mensaje);
         return "redirect:/extra_data";
+    }
+
+    @GetMapping("/extra-data-information")
+    public String getExtraDataInformation(Model model){
+        ArrayList<ExtraInformationEmployee> extraInfo = salaryCalculatorService.getExtraInformation();
+        model.addAttribute("extra_information", extraInfo);
+        return "extra-data-information";
     }
 }

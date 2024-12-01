@@ -2,6 +2,7 @@ package tingeso.mueblesstgo.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import tingeso.mueblesstgo.dtos.ExtraInformationEmployee;
 import tingeso.mueblesstgo.entities.ClockEntity;
 import tingeso.mueblesstgo.entities.EmployeeEntity;
 import tingeso.mueblesstgo.repositories.ClockRepository;
@@ -34,6 +35,13 @@ public class SalaryCalculatorService {
             else if (category == 'C')
                 multiplier = 10000;
             return extraHoursRepository.findByName(employee.getName()).getHours() * multiplier;
+        }
+        return 0;
+    }
+
+    private int getAmountExtraHours(EmployeeEntity employee){
+        if (extraHoursRepository.findByName(employee.getName()) != null) {
+            return extraHoursRepository.findByName(employee.getName()).getHours();
         }
         return 0;
     }
@@ -84,6 +92,30 @@ public class SalaryCalculatorService {
             }
         }
         return discountsByMissing;
+    }
+
+    @Generated
+    public int getAmountJustifiers(EmployeeEntity employee){
+        int amountJustifiers = 0;
+        for (int i = 17; i <= 22; i++) {
+            String date = "2022/08/" + i;
+            if (justifierRepository.findByDateAndName(date, employee.getName()) != null) {
+                amountJustifiers += 1;
+            }
+        }
+        return amountJustifiers;
+    }
+
+    @Generated
+    public int getAmountArrears(EmployeeEntity employee){
+        int amountArrears = 0;
+        for (int i = 17; i <= 22; i++) {
+            String date = "2022/08/" + i;
+            if (clockRepository.findByDateAndEmployee(date, employee) == null) {
+                amountArrears += 1;
+            }
+        }
+        return amountArrears;
     }
 
     @Generated
@@ -151,5 +183,23 @@ public class SalaryCalculatorService {
 
     public Double formatterDecimals(Double numero) {
         return Math.round(numero * Math.pow(10, 2)) / Math.pow(10, 2);
+    }
+
+    public ArrayList<ExtraInformationEmployee> getExtraInformation(){
+        ArrayList<ExtraInformationEmployee> extraInformation = new ArrayList<>();
+        ArrayList<EmployeeEntity> employees = employeeRepository.findAll();
+
+        for (EmployeeEntity employee : employees) {
+            ExtraInformationEmployee e = new ExtraInformationEmployee();
+
+            e.setName(employee.getName());
+            e.setRut(employee.getRut());
+            e.setAmountExtraHours(getAmountExtraHours(employee));
+            e.setAmountJustifiedDays(getAmountJustifiers(employee));
+            e.setAmountArrears(getAmountArrears(employee));
+            extraInformation.add(e);
+        }
+
+        return extraInformation;
     }
 }
